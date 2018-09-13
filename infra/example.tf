@@ -21,13 +21,3 @@ resource "aws_s3_bucket" "example_bucket" {
   }
 }
 
-# Configuration for Route 53 record
-resource "aws_route53_record" "www" {
-  name    = "${var.route53_domain_name}"
-  zone_id = "${var.route53_domain_zoneid}"
-  type    = "A"
-  alias {
-    zone_id = "${aws_s3_bucket.example_bucket.hosted_zone_id}"
-    evaluate_target_health = true
-  }
-}

@@ -7,7 +7,7 @@ provider "aws" {
 
 # Configuration for AWS s3 Bucket
 resource "aws_s3_bucket" "example_bucket" {
-  bucket = "julius-tf-bucket-example"
+  bucket = "www.juliusraja.la"
   acl    = "public-read"
 
   website {
@@ -22,11 +22,12 @@ resource "aws_s3_bucket" "example_bucket" {
 }
 
 # Configuration for Route 53 record
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "example_bucket" {
   name    = "${var.route53_domain_name}"
   zone_id = "${var.route53_domain_zoneid}"
   type    = "A"
   alias {
+    name    = "${aws_s3_bucket.example_bucket.website_domain}"
     zone_id = "${aws_s3_bucket.example_bucket.hosted_zone_id}"
     evaluate_target_health = true
   }

@@ -11,12 +11,15 @@ Also need to setup your AWS-credentials into a `secrets.tfvars`.
 After this, just run the following:
 
 First initialize your terraform config with:
+
 ```$ terraform init```
 
 To show the diff to your changes, run:
+
 ```$ terraform plan --var-file="secrets.tfvars"```
 
 To apply your changes, run:
+
 ```$ terraform apply --var-file="secrets.tfvars"```
 
 License MIT @ Julius Rajala, 2018

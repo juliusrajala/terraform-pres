@@ -9,6 +9,7 @@ variable "region" {
 variable "route53_domain_name" {
   default = "www.juliusraja.la"
 }
+
 variable "route53_domain_zoneid" {
   default = "Z7YFA049AWPGN"
 }

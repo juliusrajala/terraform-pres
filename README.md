@@ -26,4 +26,6 @@ To apply your changes, run:
 
 ```$ terraform apply --var-file="secrets.tfvars"```
 
-License MIT @ Julius Rajala, 2018
+### License 
+
+MIT, Julius Rajala, 2018

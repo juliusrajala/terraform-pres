@@ -2,19 +2,23 @@
 
 This is a super simplistic terraform setup for a brown-bag session.
 
-## Usage
+## Setup
 
 You need to have Terraform setup on your machine pre-running. Terraform can be installed via `brew` or from [the Terraform site](https://www.terraform.io/)
 
-Also need to setup your AWS-credentials into a `secrets.tfvars`.
+Setup your aws credentials in `secrets.tfvars`.
 
-After this, just run the following:
-
-First initialize your terraform config with:
+To finish your terraform setup, run:
 
 ```$ terraform init```
 
-To show the diff to your changes, run:
+## Usage
+
+To check the current state of your setup, you can run:
+
+```$ terraform show```
+
+To check up on what change you're about to commit, run:
 
 ```$ terraform plan --var-file="secrets.tfvars"```
 

@@ -7,7 +7,7 @@ provider "aws" {
 
 # Configuration for AWS s3 Bucket
 resource "aws_s3_bucket" "example_bucket" {
-  bucket = "julius-tf-bucket-example"
+  bucket = "www.juliusraja.la"
   acl    = "public-read"
 
   website {
